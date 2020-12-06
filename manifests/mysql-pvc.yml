@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mysql-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  # specify microk8s-hostpath
+  storageClassName: microk8s-hostpath
+  resources:
+    requests:
+      storage: 0.5Gi
